@@ -1,0 +1,123 @@
+# =====================================
+# Android & IntelliJ / Studio
+# =====================================
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# ART/Dalvik VM files
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+**/build/
+!gradle-wrapper.jar
+
+# Local configuration (SDK/NDK paths, etc.)
+local.properties
+
+# Proguard / R8
+proguard/
+*.log
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keystore files
+*.jks
+*.keystore
+*.jks.lock
+
+# =====================================
+# Kotlin / Java
+# =====================================
+*.kt~
+*.java~
+*.swp
+*.swo
+
+# =====================================
+# Android NDK / CMake
+# =====================================
+.obj/
+.externalNativeBuild/
+.cxx/
+
+# =====================================
+# Logs / Reports
+# =====================================
+*.log
+*.hprof
+*.stacktrace
+*.ec
+*.zip
+*.gz
+
+# Lint
+lint/  
+lint-results*
+
+# =====================================
+# Multi-Module Support
+# =====================================
+
+# Ignore build folders in all submodules
+*/build/
+**/build/
+
+# Ignore specific per-module outputs
+app/build/
+core/build/
+data/build/
+domain/build/
+feature-*/build/
+
+# =====================================
+# OS Specific
+# =====================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# =====================================
+# Others
+# =====================================
+captures/
+.navigation/
+releases/
+
+# Crashlytics / Firebase
+fabric.properties
+crashlytics-build.properties
+**/google-services.json
+
+# =====================================
+# Ignore environment / secrets
+# =====================================
+.env
+secrets.properties
