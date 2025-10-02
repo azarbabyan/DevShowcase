@@ -21,3 +21,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "DevShowcase"
 include(":app")
+include(":core:designsystem")
+include(":core:ui")
+include(":core:common")
+include(":core:network")
+include(":core:database")
+include(":feature:projects")
+include(":feature:projectdetail")
+include(":feature:about")

@@ -1,22 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = "com.arturzarbabyan.devshowcase"
+    namespace = "com.arturzarbabyan.feature.projects"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.arturzarbabyan.devshowcase"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -35,32 +30,24 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
 
     implementation(platform(libs.compose.bom))
     implementation(libs.material3)
-    implementation(libs.activity.compose)
-    implementation(libs.navigation.compose)
-    implementation(libs.coil.compose)
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
+
+
+    implementation(libs.paging.runtime)
+    implementation(libs.paging.compose)
+
 
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
 
 
-    implementation(project(":core:designsystem"))
     implementation(project(":core:ui"))
     implementation(project(":core:common"))
-
-
-    implementation(project(":feature:projects"))
-    implementation(project(":feature:projectdetail"))
-    implementation(project(":feature:about"))
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
 }
